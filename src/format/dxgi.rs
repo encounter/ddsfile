@@ -147,6 +147,50 @@ pub enum DxgiFormat {
     P208                        = 130,
     V208                        = 131,
     V408                        = 132,
+    // DXGI Extended formats
+    // https://github.com/bkaradzic/bgfx/blob/4f878bf473e91e373046fe38871325cd8c992b43/src/renderer_d3d.h#L26
+    ASTC_4x4_Typeless           = 133,
+    ASTC_4x4_UNorm              = 134,
+    ASTC_4x4_UNorm_sRGB         = 135,
+    ASTC_5x4_Typeless           = 137,
+    ASTC_5x4_UNorm              = 138,
+    ASTC_5x4_UNorm_sRGB         = 139,
+    ASTC_5x5_Typeless           = 141,
+    ASTC_5x5_UNorm              = 142,
+    ASTC_5x5_UNorm_sRGB         = 143,
+    ASTC_6x5_Typeless           = 145,
+    ASTC_6x5_UNorm              = 146,
+    ASTC_6x5_UNorm_sRGB         = 147,
+    ASTC_6x6_Typeless           = 149,
+    ASTC_6x6_UNorm              = 150,
+    ASTC_6x6_UNorm_sRGB         = 151,
+    ASTC_8x5_Typeless           = 153,
+    ASTC_8x5_UNorm              = 154,
+    ASTC_8x5_UNorm_sRGB         = 155,
+    ASTC_8x6_Typeless           = 157,
+    ASTC_8x6_UNorm              = 158,
+    ASTC_8x6_UNorm_sRGB         = 159,
+    ASTC_8x8_Typeless           = 161,
+    ASTC_8x8_UNorm              = 162,
+    ASTC_8x8_UNorm_sRGB         = 163,
+    ASTC_10x5_Typeless          = 165,
+    ASTC_10x5_UNorm             = 166,
+    ASTC_10x5_UNorm_sRGB        = 167,
+    ASTC_10x6_Typeless          = 169,
+    ASTC_10x6_UNorm             = 170,
+    ASTC_10x6_UNorm_sRGB        = 171,
+    ASTC_10x8_Typeless          = 173,
+    ASTC_10x8_UNorm             = 174,
+    ASTC_10x8_UNorm_sRGB        = 175,
+    ASTC_10x10_Typeless         = 177,
+    ASTC_10x10_UNorm            = 178,
+    ASTC_10x10_UNorm_sRGB       = 179,
+    ASTC_12x10_Typeless         = 181,
+    ASTC_12x10_UNorm            = 182,
+    ASTC_12x10_UNorm_sRGB       = 183,
+    ASTC_12x12_Typeless         = 185,
+    ASTC_12x12_UNorm            = 186,
+    ASTC_12x12_UNorm_sRGB       = 187,
     Force_UInt                  = 0xffffffff_u32
 }
 
@@ -307,6 +351,49 @@ impl DataFormat for DxgiFormat {
             | DxgiFormat::BC7_Typeless
             | DxgiFormat::BC7_UNorm
             | DxgiFormat::BC7_UNorm_sRGB => Some(16),
+
+            DxgiFormat::ASTC_4x4_Typeless
+            | DxgiFormat::ASTC_4x4_UNorm
+            | DxgiFormat::ASTC_4x4_UNorm_sRGB
+            | DxgiFormat::ASTC_5x4_Typeless
+            | DxgiFormat::ASTC_5x4_UNorm
+            | DxgiFormat::ASTC_5x4_UNorm_sRGB
+            | DxgiFormat::ASTC_5x5_Typeless
+            | DxgiFormat::ASTC_5x5_UNorm
+            | DxgiFormat::ASTC_5x5_UNorm_sRGB
+            | DxgiFormat::ASTC_6x5_Typeless
+            | DxgiFormat::ASTC_6x5_UNorm
+            | DxgiFormat::ASTC_6x5_UNorm_sRGB
+            | DxgiFormat::ASTC_6x6_Typeless
+            | DxgiFormat::ASTC_6x6_UNorm
+            | DxgiFormat::ASTC_6x6_UNorm_sRGB
+            | DxgiFormat::ASTC_8x5_Typeless
+            | DxgiFormat::ASTC_8x5_UNorm
+            | DxgiFormat::ASTC_8x5_UNorm_sRGB
+            | DxgiFormat::ASTC_8x6_Typeless
+            | DxgiFormat::ASTC_8x6_UNorm
+            | DxgiFormat::ASTC_8x6_UNorm_sRGB
+            | DxgiFormat::ASTC_8x8_Typeless
+            | DxgiFormat::ASTC_8x8_UNorm
+            | DxgiFormat::ASTC_8x8_UNorm_sRGB
+            | DxgiFormat::ASTC_10x5_Typeless
+            | DxgiFormat::ASTC_10x5_UNorm
+            | DxgiFormat::ASTC_10x5_UNorm_sRGB
+            | DxgiFormat::ASTC_10x6_Typeless
+            | DxgiFormat::ASTC_10x6_UNorm
+            | DxgiFormat::ASTC_10x6_UNorm_sRGB
+            | DxgiFormat::ASTC_10x8_Typeless
+            | DxgiFormat::ASTC_10x8_UNorm
+            | DxgiFormat::ASTC_10x8_UNorm_sRGB
+            | DxgiFormat::ASTC_10x10_Typeless
+            | DxgiFormat::ASTC_10x10_UNorm
+            | DxgiFormat::ASTC_10x10_UNorm_sRGB
+            | DxgiFormat::ASTC_12x10_Typeless
+            | DxgiFormat::ASTC_12x10_UNorm
+            | DxgiFormat::ASTC_12x10_UNorm_sRGB
+            | DxgiFormat::ASTC_12x12_Typeless
+            | DxgiFormat::ASTC_12x12_UNorm
+            | DxgiFormat::ASTC_12x12_UNorm_sRGB => Some(16),
 
             _ => None,
         }
